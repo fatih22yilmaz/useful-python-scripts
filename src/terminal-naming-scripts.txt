@@ -1,0 +1,27 @@
+
+uppercase all filenames in a directory
+for i in $( ls | grep [a-z] ); do mv -i $i `echo $i | tr 'a-z' 'A-Z'`; done
+
+trims all filenames in a directory
+for f in *\ *; do mv "$f" "${f// /}"; done
+
+lovercase all filenames in a directory
+for i in *; do mv "$i" "$(echo $i|tr A-Z a-z)"; done
+
+read all filenames
+for i in *; do echo "$i"
+
+lovercase only file extension in a directory
+find . -name '*.*' -exec sh -c 'a=$(echo "$0" | sed -r "s/([^.]*)\$/\L\1/"); [ "$a" != "$0" ] && mv "$0" "$a" ' {} \;
+
+optimizes all pictures of above size 700k
+find . -type f -size +700k | xargs jpegoptim --max=65 --strip-all
+find . -type f -size +700k | xargs jpegoptim --size=600 --strip-all
+
+
+//opencart docker container'ını kaldırmak için container içinden /var/run/mysql ve alt dizinlerininin ownerlarını mysql:mysql yap.
+
+lampp çalıştırma komutları:
+sudo LC_ALL=C ./lampp start
+ls -ilah 								shows the inum of the file
+find . -inum {inum of file}
