@@ -1,21 +1,21 @@
-category_list = {'Colorful Kilims',
-                 'Vintage Modern Kilims',
-                 'Embroidered Kilims',
-                 'Rag Rugs',
-                 'Hemp Kilims',
-                 'Khotan | Caucasian Rugs',
-                 'Turkish Anatolian Rugs',
-                 'Persian Rugs',
-                 'Turkish Oushak Rugs',
+category_list = {'RUGS:::RUGS///HANDWOVEN KILIM RUGS:::RUGS///HANDWOVEN KILIM RUGS///Colorful Kilims',
+                 'RUGS:::RUGS///HANDWOVEN KILIM RUGS:::RUGS///HANDWOVEN KILIM RUGS///Vintage Modern Kilims',
+                 'RUGS:::RUGS///HANDWOVEN KILIM RUGS:::RUGS///HANDWOVEN KILIM RUGS///Embroidered Kilims',
+                 'RUGS:::RUGS///HANDWOVEN KILIM RUGS:::RUGS///HANDWOVEN KILIM RUGS///Rag Rugs',
+                 'RUGS:::RUGS///HANDWOVEN KILIM RUGS:::RUGS///HANDWOVEN KILIM RUGS///Hemp Kilims',
+                 'RUGS:::RUGS///HANDKNOTTED RUGS:::RUGS///HANDKNOTTED RUGS///Khotan | Caucasian Rugs',
+                 'RUGS:::RUGS///HANDKNOTTED RUGS:::RUGS///HANDKNOTTED RUGS///Turkish Anatolian Rugs',
+                 'RUGS:::RUGS///HANDKNOTTED RUGS:::RUGS///HANDKNOTTED RUGS///Persian Rugs',
+                 'RUGS:::RUGS///HANDKNOTTED RUGS:::RUGS///HANDKNOTTED RUGS///Turkish Oushak Rugs',
                  'Mini Rugs | Door Mats',
-                 '16"x16"(40x40cm) Pillows',
-                 '16"x24"(40x60cm) Pillows',
-                 '20"x20"(50x50cm) Pillows',
-                 '14"x20"(35x50cm) Pillows',
-                 '20"x28"(50x70cm) Pillows',
-                 '12"x24"(30x60cm) Pillows',
-                 '18"x18"(45x45cm) Pillows',
-                 '12"x20"(30x50cm) Pillows', }
+                 'PILLOWS:::PILLOWS///16"x16"(40x40cm) Pillows',
+                 'PILLOWS:::PILLOWS///16"x24"(40x60cm) Pillows',
+                 'PILLOWS:::PILLOWS///20"x20"(50x50cm) Pillows',
+                 'PILLOWS:::PILLOWS///14"x20"(35x50cm) Pillows',
+                 'PILLOWS:::PILLOWS///20"x28"(50x70cm) Pillows',
+                 'PILLOWS:::PILLOWS///12"x24"(30x60cm) Pillows',
+                 'PILLOWS:::PILLOWS///18"x18"(45x45cm) Pillows',
+                 'PILLOWS:::PILLOWS///12"x20"(30x50cm) Pillows', }
 
 
 def check_categories(category_file):
@@ -23,7 +23,7 @@ def check_categories(category_file):
     for index, category in enumerate(categories):
         category = category.rstrip()
         if category not in category_list:
-            print('Inappropriate category name: ' + category + ' index: ' + str(index))
+            print('Inappropriate category name: "' + category + '" on line: ' + str(index + 1))
 
 
 check_categories('../resources/categories.txt')
