@@ -7,7 +7,7 @@ category_list = {'RUGS:::RUGS///HANDWOVEN KILIM RUGS:::RUGS///HANDWOVEN KILIM RU
                  'RUGS:::RUGS///HANDKNOTTED RUGS:::RUGS///HANDKNOTTED RUGS///Turkish Anatolian Rugs',
                  'RUGS:::RUGS///HANDKNOTTED RUGS:::RUGS///HANDKNOTTED RUGS///Persian Rugs',
                  'RUGS:::RUGS///HANDKNOTTED RUGS:::RUGS///HANDKNOTTED RUGS///Turkish Oushak Rugs',
-                 'Mini Rugs | Door Mats',
+                 'MINI RUGS | DOOR MATS',
                  'PILLOWS:::PILLOWS///16"x16"(40x40cm) Pillows',
                  'PILLOWS:::PILLOWS///16"x24"(40x60cm) Pillows',
                  'PILLOWS:::PILLOWS///20"x20"(50x50cm) Pillows',
@@ -24,6 +24,7 @@ def check_categories(category_file):
         category = category.rstrip()
         if category not in category_list:
             print('Inappropriate category name: "' + category + '" on line: ' + str(index + 1))
+    print("\nFinished Successfully!..")
 
 
 check_categories('../resources/categories.txt')
