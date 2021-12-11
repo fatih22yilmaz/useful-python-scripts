@@ -1,0 +1,69 @@
+ürün girerken 700mb üstündeki fotolar 65% küçültülecek.
+find . -type f -size +700k | xargs jpegoptim --size=600 --strip-all
+
+name girilirken normal ismin sonuna ürün ebatı ft olarak girilecek (width x length).
+Striped Vintage Turkish Kilim Rug - 4`0" x 6`3"
+
+cm to ft converter excel formula:
+=TAMSAYI(YUVARLA(F2*0,3937;0)/12)&" ` "&MOD(YUVARLA(F2*0,3937;0);12)&" """&" ("&F2&" cm)"
+
+kategoriler girilirken
+
+handknotted olanlar için aşağıdaki ön ek,
+RUGS:::RUGS///HANDKNOTTED RUGS:::RUGS///HANDKNOTTED RUGS///
+
+handwowen olanlar için aşağıdaki ön ek kullanılacak.
+RUGS:::RUGS///HANDWOVEN KILIM RUGS:::RUGS///HANDWOVEN KILIM RUGS///
+
+tag
+		Style 
+		Region
+		Size(size'ı runner(s) olanların kıçına rug eklenmiyor. diğerlerine ekleniyor.)
+		Color(Her tek ayrı ayrı yazılıp kıçlarına rug ekleniyor.)
+		Age (Vintage Turkish Rug (age vintage yazan)
+			 Antique Rug (age antique yazan))
+
+
+seo-keyword girilirken ürün adında alfabetik karakter haricindekiler temizlenir
+
+meta-keyword bölümünün ön eki olarak aşağıdaki kullanılır son ek olarak da tag bölümü kullanılır.
+  
+  boşluklu:
+  Distressed Rug, Oushak Rug, Large Rug, Blue Beige Rug, Vintage Turkish Rug, Oushak Carpet, Vintage Carpet, Turkish rug, Turkish Vintage Carpet, 
+
+  boşluksuz:
+  Distressed Rug,Oushak Rug,Large Rug,Blue Beige Rug,Vintage Turkish Rug,Oushak Carpet,Vintage Carpet,Turkish rug,Turkish Vintage Carpet,
+
+Etsy için woveny meta-keyword'ünün boşlukları temizlenir yalnızca.
+
+ürün girişleri seo açısından 50 şer 50 şer birer gün arayla yapılacak.
+
+Not: csv hazırlandıktan sonra yükleme yapmadan önce AG column'u kontrol edilmeli oraya row bazlı açıklamalar yazılıyor hepsi çözüldükten sonra bu column tamamen kaldırılmalı ve csv yüklenmeli.
+
+dosya isimlerini uppercase 
+for i in $( ls | grep [A-Z] ); do mv -i $i `echo $i | tr 'A-Z' 'a-z'`; done
+
+dosya uzantılarını lowercase
+for file in *.JPG; do mv "$file" "${file%.JPG}.jpg"; done
+
+run python category checker 
+
+
+Pillow::::::::::::::::::....
+
+tag-pillow
+		Style
+		Size(inch)
+		Size(cm)
+		Color 
+		kıçlarına Pillow ekleniyor
+
+
+
+meta-keyword prefix for pillows:
+
+boşluksuz:
+Decorative Pillow,Handmade Pillow,Kilim Pillow,Throw Pillow,Turkish Kilim Pillow,Home Decor,Striped Pillow,Cushion Cover,Pillow Cover,Kilim Cushion Cover,
+
+boşluklu:
+Decorative Pillow, Handmade Pillow, Kilim Pillow, Throw Pillow, Turkish Kilim Pillow, Home Decor, Striped Pillow, Cushion Cover, Pillow Cover, Kilim Cushion Cover, 
